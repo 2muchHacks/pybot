@@ -4,7 +4,6 @@ APScheduler==3.7.0
 async-timeout==3.0.1
 attrs==21.2.0
 chardet==4.0.0
-discord-ext-menus==1.0.0a30+g309c702
 discord.py==1.7.2
 idna==3.2
 multidict==5.1.0
