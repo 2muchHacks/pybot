@@ -1,4 +1,6 @@
 from discord import Intents
+import os
+from discord import Embed
 from discord.ext.commands import Bot as BotBase
 
 PREFIX = "P+"
@@ -37,6 +39,15 @@ class Bot(BotBase):
             print("Py++ Cleaned codes...")
             channel = self.get_channel(850607259796504607)
             await channel.send("i am now online :eyes:")
+
+            embed = Embed(title="PY++ here :wink:", description="I am brother of FUN++ but \'PYTHONIFIED', yes thats the word ...")
+            fields = [("Name :", "Age  :", True),
+                      ("PY++#9619","3 sec", True),
+                      ("me belongs to", "2muchHacks#0419", False)]
+            for name, value, inline in fields:          
+                embed.add_field(name=name, value=value, inline=inline)
+            await channel.send(embed=embed)    
+
         else:
             print("Py++ is back...")
 
