@@ -1,3 +1,4 @@
+from discord import Intents
 from discord.ext.commands import Bot as BotBase
 
 PREFIX = "P+"
@@ -9,7 +10,11 @@ class Bot(BotBase):
         self.ready = False
         self.guild = None
 
-        super().__init__(command_prefix=PREFIX, owner_ids=OWNER_IDS)
+        super().__init__(
+            command_prefix=PREFIX,
+             owner_ids=OWNER_IDS
+             intents=Intents.all(),
+        )
 
     def run(self, version):
         self.VERSION = version
