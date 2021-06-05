@@ -25,7 +25,7 @@ class Bot(BotBase):
             self.TOKEN = tf.read()
 
         print("waking py++...")
-        super().run(self.TOKEN)
+        super().run(os.environ['DISCORD_TOKEN'])
 
     async def on_connect(self):
         print("Py++ is Online...")
