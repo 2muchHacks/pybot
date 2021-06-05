@@ -12,14 +12,14 @@ class Bot(BotBase):
 
         super().__init__(
             command_prefix=PREFIX,
-             owner_ids=OWNER_IDS
-             intents=Intents.all(),
+             owner_ids=OWNER_IDS,
+             intents=Intents.all()
         )
 
     def run(self, version):
         self.VERSION = version
 
-        with open("./lib/bot/token", "r", encoding="utf-8") as tf:
+        with open("./lib/bot/token.0", "r", encoding="utf-8") as tf:
             self.TOKEN = tf.read()
 
         print("waking py++...")
@@ -35,7 +35,8 @@ class Bot(BotBase):
         if not self.ready:
             self.ready = True
             print("Py++ Cleaned codes...")
-
+            channel = self.get_channel(850607259796504607)
+            await channel.send("i am now online :eyes:")
         else:
             print("Py++ is back...")
 
