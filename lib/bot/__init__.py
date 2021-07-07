@@ -3,7 +3,7 @@ import os
 from discord import Embed
 from discord.ext.commands import Bot as BotBase
 from boto.s3.connection import S3Connection
-s3 = S3Connection(os.environ['2FA7])
+s3 = S3Connection(os.environ['2FA7']
 
 PREFIX = "P+"
 OWNER_IDS = [844186332313288726]
