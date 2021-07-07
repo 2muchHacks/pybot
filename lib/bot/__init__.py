@@ -2,8 +2,6 @@ from discord import Intents
 import os
 from discord import Embed
 from discord.ext.commands import Bot as BotBase
-from boto.s3.connection import S3Connection
-s3 = S3Connection(os.environ['2FA7'])
 
 PREFIX = "P+"
 OWNER_IDS = [844186332313288726]
@@ -27,7 +25,7 @@ class Bot(BotBase):
             self.TOKEN = tf.read()
 
         print("waking py++...")
-        super().run(os.environ[s3])
+        super().run(os.environ['2FA7'])
 
     async def on_connect(self):
         print("Py++ is Online...")
