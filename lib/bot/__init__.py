@@ -37,7 +37,7 @@ class Bot(BotBase):
         if not self.ready:
             self.ready = True
             print("Py++ Cleaned codes...")
-            channel = self.get_channel(775237797639487489)
+            channel = self.get_channel(775234817990197258)
             await channel.send("i am now online :eyes:")
 
             embed = Embed(title="PY++ here :wink:", description="I am brother of FUN++ but \'PYTHONIFIED', yes thats the word ...")
